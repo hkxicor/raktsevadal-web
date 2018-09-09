@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = (props) => {
     if (!props.data || props.data.active != 1) {
@@ -34,11 +35,11 @@ const Header = (props) => {
                                     <ul id="menu-main-menu" class="menu theme_primary_menu">
                                         {
                                             metaData.pages.map((item) => {
-                                                return item.active ?
+                                                return item.active == 1 ?
                                                     <li
                                                         id="menu-item-988"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-988">
-                                                        <a href={item.route}>{item.name}</a>
+                                                        <Link to={item.route}>{item.name}</Link>
                                                     </li>
                                                     : null
                                             })

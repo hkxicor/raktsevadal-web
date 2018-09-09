@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const WhoWeAreSection = (props) => {
     if (!props.data || props.data.active != 1) {
@@ -20,14 +21,14 @@ const WhoWeAreSection = (props) => {
                                         {
                                             metaData.buttons.map((button) => (
                                                 <div style={{ margin: 10, padding: 10 }} class="col-md-5 col-sm-12">
-                                                    <a
-                                                        href={button.route}
+                                                    <Link
+                                                        to={button.route}
                                                         title="REQUEST APPOINTMENT"
                                                         target=" _blank"
                                                         class="btn btn-cta-2 "
                                                     >
                                                         {button.title}
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             ))
                                         }
