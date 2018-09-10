@@ -15,8 +15,8 @@ const NumbersOfDonations = (props) => {
                             <div class="wpb_wrapper">
                                 <div class="row">
                                     {
-                                        metaData.cards.map((item) => (
-                                            <div class="col-md-3 col-sm-6 col-xs-12   text-center">
+                                        metaData.cards.map((item, index) => (
+                                            <div kye={index} class="col-md-3 col-sm-6 col-xs-12   text-center">
                                                 <div class="counter-block-1">
                                                     <span class={item.class}></span>
                                                     <div class="count-info">
